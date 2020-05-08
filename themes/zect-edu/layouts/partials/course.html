@@ -1,0 +1,48 @@
+{{ if .Site.Params.course.enable }}
+{{ "<!-- about-sm Area -->" | safeHTML }}
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+        {{ with .Site.Params.course.title }}<h2 class="mb-0 text-nowrap mr-3">{{ . }}</h2>{{ end }}
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <div>
+            <a href="{{ `course` | relLangURL }}" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- course list -->
+    <div class="row justify-content-center">
+      <!-- course item -->
+      {{ range first 6 (where .Site.RegularPages "Type" "course")}}
+        <div class="col-lg-4 col-sm-6 mb-5">
+            <div class="card p-0 border-primary rounded-0 hover-shadow">
+                <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL}}" alt="Gambar tidak bisa dimuat">
+                <div class="card-body">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item">
+                            <i class="ti-calendar"></i>{{ .Date }}</li>
+                        <li class="list-inline-item">
+                            <i class="ti-bookmark-alt"></i>{{ .Params.tags }}</li></ul>
+                    <h4 class="card-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h4>
+                    <p class="card-text mb-4">{{ .Params.description }}</p>
+                    <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Apply now</a>
+                </div>
+            </div>  
+        </div>
+      {{ end }}
+    </div>
+    <!-- /course list -->
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="{{ `course` | relLangURL }}" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">{{ "see_all" }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

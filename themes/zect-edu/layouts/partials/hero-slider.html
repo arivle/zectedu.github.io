@@ -1,0 +1,27 @@
+{{ if .Site.Params.heroSlider.enable }}
+{{ "<!-- Hero-Slider Area -->" | safeHTML }}
+<section class="bg-gray overflow-hidden">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-xl-4 col-lg-5 align-self-end pt-5">
+        <img class="img-fluid w-100" src="images/banner/banner-feature.png" alt="banner-feature">
+      </div>
+      <div class="col-xl-8 col-lg-7">
+        <div class="row feature-blocks justify-content-between">
+          {{ range .Site.Params.feature_item }}
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="{{ .icon }} mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            {{ with .name }}
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{ . }}</h3>
+            {{ end }}
+            {{ with .content}}
+            <p>{{ . }}</p>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ if .Site.Params.story.enable }}
+{{ "<!-- story Area -->" | safeHTML }}
+<section class="section bg-cover" style="background-image:url(/images/backgrounds/success-story.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-4 position-relative success-video">
+        <a class="play-btn venobox" href="https://www.youtube.com/watch?v=385LMlgC7I4" data-vbtype="video">
+          <i class="ti-control-play"></i>
+        </a>
+      </div>
+      <div class="col-lg-6 col-sm-8">
+        <div class="bg-white p-5">
+        {{ with .Site.Params.story.title }}
+          <h2 class="section-title">{{ . }}</h2>
+          {{ end }}
+          {{ with .Site.Params.story.content }}
+          <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,18 @@
+{{ if .Site.Params.cta.enable }}
+{{ "<!-- CTA Area -->" | safeHTML }}
+<section class="section bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+      {{ with .Site.Params.cta.subtitle }}
+            <h6 class="text-white font-secondary mb-0">{{ . }}</h6>
+        {{ end }}
+        {{ with .Site.Params.cta.title }}
+            <h2 class="section-title text-white">{{ . }}</h2>
+        {{ end }}
+        <a href="#" class="btn btn-secondary">Kirim Pesan</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
