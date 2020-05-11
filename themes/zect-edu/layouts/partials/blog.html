@@ -15,7 +15,7 @@
             <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL}}" alt="Gambar tidak bisa dimuat">
             <div class="card-body">
                 <ul class="list-inline mb-3">
-                    <li class="list-inline-item mr-3 ml-0"><i class="ti-calendar"></i>{{ .Date }}</li>
+                    <li class="list-inline-item mr-3 ml-0"><i class="ti-calendar"></i>{{ .Date.Format .Site.Params.dateFormat }}</li>
                     <li class="list-inline-item mr-3 ml-0"><i class="ti-user"></i> <a href="/authorjohn-doe">{{ .Params.Author }}</a></li>
                 </ul>
                 <h4 class="card-title"><a href="http://localhost:42873/blog/blog-post-1/">{{ .Params.Title }}</a></h4>

@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <ul class="list-inline mb-2">
                         <li class="list-inline-item">
-                            <i class="ti-calendar"></i>{{ .Date }}</li>
+                            <i class="ti-calendar"></i>{{ .Date.Format .Site.Params.dateFormat }}</li>
                         <li class="list-inline-item">
                             <i class="ti-bookmark-alt"></i>{{ .Params.tags }}</li></ul>
                     <h4 class="card-title">

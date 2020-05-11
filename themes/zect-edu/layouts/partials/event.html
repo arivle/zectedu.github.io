@@ -17,14 +17,23 @@
       <!-- event -->
       {{ range first 3 (where .Site.RegularPages "Type" "event")}}
       <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-        {{ .Render "event" }}
+        <div class="card border-0 rounded-0 hover-shadow">
+            <div class="card-img position-relative">
+                <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL}}" alt="Belajar Asyik Saat di Rumah Saja">
+                <div class="card-date"><span>{{ .Date.Format "02" }}</span><br>{{ .Date.Format "Feb" }}</div>
+            </div>
+            <div class="card-body">
+                <p><i class="ti-location-pin text-primary mr-2"></i>{{ .Params.Location }}</p>
+                <h4 class="card-title"><a href="http://localhost:41231/event/event-2/">{{ .Title }}</a></h4>
+            </div>
+        </div>
       </div>
       {{ end }}
     </div>
     <!-- mobile see all button -->
     <div class="row">
       <div class="col-12 text-center">
-        <a href="{{`event` | relLangURL }}" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">{{ i18n "see_all" }}</a>
+        <a href="{{`event` | relLangURL }}" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">Lihat Selengkapnya</a>
       </div>
     </div>
   </div>
