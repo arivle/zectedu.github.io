@@ -18,6 +18,8 @@ metaDataFormat = "yaml"
 
 # CSS Plugins
 [[params.plugins.css]]
+link = "plugins/owlcarousel/owl.carousel.min.css"
+[[params.plugins.css]]
 link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 link = "plugins/slick/slick.css"
@@ -29,6 +31,8 @@ link = "plugins/venobox/venobox.css"
 link = "plugins/themify-icons/themify-icons.css"
 
 # JS Plugins
+[[params.plugins.js]]
+link = "plugins/owlcarousel/owl.carousel.min.js"
 [[params.plugins.js]]
 link = "plugins/jQuery/jquery.min.js"
 [[params.plugins.js]]
@@ -285,5 +289,5 @@ contentDir = "content/english"
 weight = 1
 home = "Home"
 # copyright
-copyright = "Copyright &copy; 2020 a hugo theme by [ZectStudio](https://zectstudio.id)"
+copyright = "&copy;2020 by [ZectStudio](https://zectstudio.id)"
 

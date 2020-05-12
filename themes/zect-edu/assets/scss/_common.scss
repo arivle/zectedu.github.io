@@ -33,6 +33,9 @@ img {
   vertical-align: middle;
   border: 0;
 }
+.img-fluid{
+    max-width: 70%;
+}
 
 a,
 a:hover,
@@ -81,8 +84,8 @@ a h4{
 }
 
 .section {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   &-sm {
     padding-top: 40px;

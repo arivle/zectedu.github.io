@@ -185,6 +185,9 @@ img {
   vertical-align: middle;
   border: 0; }
 
+.img-fluid {
+  max-width: 70%; }
+
 a,
 a:hover,
 a:focus {
@@ -222,8 +225,8 @@ a h4:hover {
   outline: 0; }
 
 .section {
-  padding-top: 90px;
-  padding-bottom: 90px; }
+  padding-top: 70px;
+  padding-bottom: 70px; }
   .section-sm {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -472,7 +475,7 @@ textarea.form-control {
       background: #ffffff; } }
 @media (max-width: 991px) {
   .navbar-collapse {
-    background: #ffffff; } }
+    background: #214478; } }
 
 .navbar-nav {
   padding-left: 50px;
@@ -785,7 +788,7 @@ link:focus,
 
 .footer {
   border-color: #494a43 !important;
-  padding-top: 275px; }
+  padding-top: 70px; }
 
 /* /footer */
 .filter-controls li {

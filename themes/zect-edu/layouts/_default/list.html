@@ -1,42 +1,81 @@
 {{ define "main" }}
 
 <!-- blogs -->
-<section class="section">
+<section class="section d-none d-sm-block">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 order-2 order-lg-1">
-        <div class="row">
-          <!-- blog post -->
-          {{ $paginator := .Paginate ( where .Data.Pages "Type" "post") }}
+      <div class="col-12">
+          <div class="row justify-content-center">
+      <!-- blog post -->
+                {{ $paginator := .Paginate ( where .Data.Pages "Type" "post") }}
           {{ range $paginator.Pages }}
-          <div class="col-sm-6 mb-5">
-            <article
-              class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-              <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
-              <div class="card-body">
-                <!-- post meta -->
+      <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">  
+        <article class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL}}" alt="Gambar tidak bisa dimuat">
+            <div class="card-body">
                 <ul class="list-inline mb-3">
-                  <!-- post date -->
-                  <li class="list-inline-item mr-3 ml-0"><i class="ti-calendar"></i>
-                    {{ .PublishDate.Format "02 Jan, 2006" }}</li>
-                  <!-- author -->
-                  <li class="list-inline-item mr-3 ml-0"><i class="ti-user"></i> <a
-                      href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize }}">{{ .Params.Author | title }}</a>
-                  </li>
+                    <li class="list-inline-item mr-3 ml-0"><i class="ti-calendar"></i>{{ .Date.Format .Site.Params.dateFormat }}</li>
+                    <li class="list-inline-item mr-3 ml-0"><i class="ti-user"></i> <a href="/authorjohn-doe">{{ .Params.Author }}</a></li>
                 </ul>
-                <h4 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                <p class="card-text">{{ .Summary | truncate 100 }}</p>
-                <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
-              </div>
-            </article>
-          </div>
-          {{ end }}
-          <div class="col-12 mt-4">
-            {{ template "_internal/pagination.html" . }}
-          </div>
-        </div>
+                <h4 class="card-title"><a href="http://localhost:42873/blog/blog-post-1/">{{ .Params.Title }}</a></h4>
+                <p class="card-text">T{{ .Params.description }}</p>
+                <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Selengkapnya</a>
+                </div>
+                </article>
+      </article>
+      {{ end }}
+    </div>
       </div>
-      {{ partial "blog-sidebar.html" . }}
+
+    </div>
+  </div>
+</section>
+<section class="section d-sm-block d-lg-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <div class="owl-carousel owl-theme">
+          <script>
+          $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+                }
+            });
+            });
+          </script>
+      <!-- blog post -->
+                {{ $paginator := .Paginate ( where .Data.Pages "Type" "post") }}
+          {{ range $paginator.Pages }}
+      <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">  
+        <article class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+            <img class="card-img-top rounded-0" src="{{ .Params.Image | relURL}}" alt="Gambar tidak bisa dimuat">
+            <div class="card-body">
+                <ul class="list-inline mb-3">
+                    <li class="list-inline-item mr-3 ml-0"><i class="ti-calendar"></i>{{ .Date.Format .Site.Params.dateFormat }}</li>
+                    <li class="list-inline-item mr-3 ml-0"><i class="ti-user"></i> <a href="/authorjohn-doe">{{ .Params.Author }}</a></li>
+                </ul>
+                <h4 class="card-title"><a href="http://localhost:42873/blog/blog-post-1/">{{ .Params.Title }}</a></h4>
+                <p class="card-text">T{{ .Params.description }}</p>
+                <a href="{{ .Permalink }}" class="btn btn-primary btn-sm">Selengkapnya</a>
+                </div>
+                </article>
+      </article>
+      {{ end }}
+    </div>
+      </div>
+
     </div>
   </div>
 </section>
