@@ -97,7 +97,10 @@
             $(".owl-carousel").owlCarousel({
                 loop:true,
                 margin:10,
+                autoplay:true,
+                autoplayTimeout:5000,
                 nav:true,
+                navText:["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"],
                 responsive:{
                 0:{
                     items:1

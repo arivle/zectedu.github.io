@@ -52,12 +52,12 @@ link = "plugins/google-map/gmap.js"
 # main menu
 [[menu.main]]
 name = "Tentang Kami"
-URL = "#about"
+URL = "/about"
 weight = 1
 # 
 # [[menu.main]]
 # name = "course"
-# URL = "#course"
+# URL = "course"
 # weight = 2
 # 
 # [[menu.main]]
@@ -78,7 +78,7 @@ weight = 1
 #   [[menu.main]]
 #   parent = "Pages"
 #   name = "event"
-#   URL = "#event"
+#   URL = "event"
 # 
 #   [[menu.main]]
 #   parent = "Pages"
@@ -92,12 +92,12 @@ weight = 1
   
 [[menu.main]]
 name = "Blog"
-URL = "#blog"
+URL = "/blog"
 weight = 4
   
 [[menu.main]]
 name = "Hubungi Kami"
-URL = "#cta"
+URL = "/contact"
 weight = 5
 
 
