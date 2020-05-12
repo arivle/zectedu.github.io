@@ -1,18 +1,27 @@
 {{ if .Site.Params.cta.enable }}
 {{ "<!-- CTA Area -->" | safeHTML }}
-<section class="section bg-primary">
+<section class="section bg-secondary" id="cta">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
-      {{ with .Site.Params.cta.subtitle }}
-            <h6 class="text-white font-secondary mb-0">{{ . }}</h6>
-        {{ end }}
-        {{ with .Site.Params.cta.title }}
-            <h2 class="section-title text-white">{{ . }}</h2>
-        {{ end }}
-        <a href="#" class="btn btn-secondary">Kirim Pesan</a>
+      <div class="col-lg-12">
+        <h2 class="section-title">Hubungi Kami</h2>
       </div>
     </div>
+    <div class="row">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <form action="{{ .Site.Params.contact_form_action | safeURL }}" method="POST">
+          <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
+          <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
+          <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
+          <button type="submit" value="send" class="btn btn-primary">Kirim Pesan</button>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <p>{{ .Site.Params.cta.Content }}</p>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 {{ end }}

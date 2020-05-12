@@ -32,9 +32,9 @@ link = "plugins/themify-icons/themify-icons.css"
 
 # JS Plugins
 [[params.plugins.js]]
-link = "plugins/owlcarousel/owl.carousel.min.js"
-[[params.plugins.js]]
 link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/owlcarousel/owl.carousel.min.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
@@ -51,77 +51,65 @@ link = "plugins/google-map/gmap.js"
 
 # main menu
 [[menu.main]]
-name = "About"
-URL = "about"
+name = "Tentang Kami"
+URL = "#about"
 weight = 1
-
-[[menu.main]]
-name = "course"
-URL = "course"
-weight = 2
-
-[[menu.main]]
-weight = 3
-name = "Pages"
-hasChildren = true
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "teacher"
-  URL = "teacher"
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "notice"
-  URL = "notice"
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "event"
-  URL = "event"
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "scholarship"
-  URL = "scholarship"
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "research"
-  URL = "research"
+# 
+# [[menu.main]]
+# name = "course"
+# URL = "#course"
+# weight = 2
+# 
+# [[menu.main]]
+# weight = 3
+# name = "Pages"
+# hasChildren = true
+# 
+#   [[menu.main]]
+#   parent = "Pages"
+#   name = "teacher"
+#   URL = "teacher"
+# 
+#   [[menu.main]]
+#   parent = "Pages"
+#   name = "notice"
+#   URL = "notice"
+# 
+#   [[menu.main]]
+#   parent = "Pages"
+#   name = "event"
+#   URL = "#event"
+# 
+#   [[menu.main]]
+#   parent = "Pages"
+#   name = "scholarship"
+#   URL = "scholarship"
+# 
+#   [[menu.main]]
+#   parent = "Pages"
+#   name = "research"
+#   URL = "research"
   
 [[menu.main]]
-name = "blog"
-URL = "blog"
+name = "Blog"
+URL = "#blog"
 weight = 4
   
 [[menu.main]]
-name = "Contact"
-URL = "contact"
+name = "Hubungi Kami"
+URL = "#cta"
 weight = 5
 
 
 # footer menu
 
-[[menu.footer]]
-name = "teacher"
-URL = "teacher"
+[[menu.edulink]]
+name = "ZectStudio"
+URL = "https://zectstudio.id"
 
-[[menu.footer]]
-name = "notice"
-URL = "notice"
-
-[[menu.footer]]
-name = "event"
-URL = "event"
-
-[[menu.footer]]
-name = "scholarship"
-URL = "scholarship"
-
-[[menu.footer]]
-name = "research"
-URL = "research"
+[[menu.edulink]]
+name = "Kementerian Pendidikan dan Kebudayaan"
+URL = "https://www.kemdikbud.go.id/"
 
 
 #################### default parameters ################################
@@ -172,9 +160,10 @@ URL = "research"
         [[button]]
             enable = true
             
-    #hero-slider.html
-    [params.heroslider]
+    #sekilas.html
+    [params.sekilas]
         enable = true
+        title = "Sekilas ZectEdu"
         image = "images/banner/banner-feature.png"
         
         [[params.feature_item]]
@@ -205,24 +194,24 @@ URL = "research"
         
     #course.html
     [params.course]
-        enable = true
+        enable = false
         title = "Kurikulum"
         
     #cta.html
     [params.cta]
         enable = true
-        subtitle = "Berminat?"
         title = "Hubungi Kami"
+        content = "Anda punya saran atau kritik terhadap pelayanan kami? Anda punya kesan atau pesan terhadap pengalaman belajar mengajar di sekolah kami? Silakan berkabar pada kami"
     
     #success-story.html
     [params.story]
         enable = true
-        title = "Cerita Sukses"
-        content = "Kisah alumni kami yang sukses menekuni bisnis pengembangan AI"
+        title = "Testimoni"
+        content = "ZectEdu menjadikan saya seorang yang tangguh. Kini sekarang bisa menjadi shacou"
         
     #event.html
     [params.event]
-        enable = true
+        enable = false
         title = "Acara Sekolah"
         
     #blog.html
@@ -287,7 +276,7 @@ languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
-home = "Home"
+home = "Beranda"
 # copyright
-copyright = "&copy;2020 by [ZectStudio](https://zectstudio.id)"
+copyright = "Tema ZectEdu oleh [ZectStudio](https://zectstudio.id)"
 
